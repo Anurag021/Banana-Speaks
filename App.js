@@ -16,7 +16,7 @@ function doFetch(text){
     fetch(createURL(text))
     .then (response => response.json())
     .then (json=> {
-        var translatedText = json.contents.text  //fetching response from json
+        var translatedText = json.contents.translated  //fetching response from json
         outputBox.innerText = translatedText   // showing the response in output box -- output
        
     }).catch(errorHandler)
